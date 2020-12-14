@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <title>Lob.com Sample 4x6 Postcard Back</title>
+    <style>
+        *,
+        *:before,
+        *:after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            position: relative;
+            width: 6.25in;
+            height: 4.25in;
+            margin: 0;
+            padding: 0;
+            /* If using an image, the background image should have dimensions of 1875x1275 pixels. */
+            background-image: url("https://s3-us-west-2.amazonaws.com/public.lob.com/assets/6.25x4.24-Cats-Postcard-Back.png");
+            background-size: 6.25in 4.25in;
+            background-repeat: no-repeat;
+            /* text-shadow: 2px 0px black; */
+        }
+
+        #safe-area {
+            position: absolute;
+            width: 5.875in;
+            height: 3.875in;
+            left: 0.1875in;
+            top: 0.1875in;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        #ink-free {
+            position: absolute;
+            width: 3.2835in;
+            height: 2.375in;
+            right: 0.275in;
+            bottom: 0.25in;
+            background-color: white;
+        }
+
+        .text {
+            margin: 10px;
+            width: 200px;
+            font-family: 'Open Sans';
+            font-weight: 500;
+            font-size: 18px;
+            color: #ffb366;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="safe-area">
+        <!-- All text should appear within the safe area. -->
+        <div class="text">
+            <h2>{{recipient}},</h2>
+            <p>{{message}}</p>
+            <p>{{closing}}</p>
+            <p>{{sender}}</p>
+
+        </div>
+    </div>
+
+    <!-- Delete this div before submitting your postcard! -->
+    <!-- Do not place any artwork or text in the ink free area. Address and postage will be automatically printed here by Lob. -->
+    <div id="ink-free"></div>
+</body>
+
+</html>

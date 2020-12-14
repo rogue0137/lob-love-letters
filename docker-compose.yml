@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  lob-love-letters:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app/
+    env_file:
+      - .env

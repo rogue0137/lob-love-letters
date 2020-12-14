@@ -1,0 +1,26 @@
+{
+  "name": "lob-love-letters",
+  "version": "1.0.0",
+  "description": "Send a postcard to your friend!",
+  "main": "prep_postcard.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "docker-compose build",
+    "send_hey_girl": "docker-compose run lob-love-letters node send_hey_girl_postcard.js",
+    "send_cats": "docker-compose run lob-love-letters node send_cats_postcard.js",
+    "send_thanks": "docker-compose run lob-love-letters node send_thanks_postcard.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogue0137/lob-love-letters.git"
+  },
+  "author": "Krys Flores",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rogue0137/lob-love-letters/issues"
+  },
+  "homepage": "https://github.com/rogue0137/lob-love-letters#readme",
+  "dependencies": {
+    "lob": "^6.1.1"
+  }
+}
